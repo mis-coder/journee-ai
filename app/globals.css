@@ -4,14 +4,15 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --primary: oklch(0.205 0 0);
-  --secondary: oklch(0.97 0 0);
-  --accent: oklch(0.97 0 0);
-  --highlight: #ffd93d;
-  --muted: oklch(0.97 0 0);
+  --primary: #aec468;
+  --secondary: #EADBC8;
+  --accent: #C7B7A3;
+  --highlight: #ffe66d;
+  --muted: #f1f1f1;
   --radius: 0.625rem;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1f1f1f;
+
 
   --card: #ffffff;
   --card-foreground: #171717;
@@ -50,7 +51,7 @@
   --color-muted: var(--muted);
 
   --font-sans: var(--font-jakarta-sans);
-  --font-mono: var(--font-jetbrains-mono);
+  --font-oregano: var(--font-oregano);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -85,18 +86,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #ff8c8c;
-    --secondary: #ffc2a1;
-    --accent: #7ad3d5;
-    --highlight: #ffe66d;
-    --muted: #9a9a9a;
-
-    --background: #0a0a0a;
+    --background: #1f1f1f;
     --foreground: #ededed;
   }
 }
-
-
 
 .dark {
   --background: #0a0a0a;

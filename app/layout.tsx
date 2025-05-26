@@ -1,5 +1,6 @@
+import Header from "@/components/ui/header";
 import type { Metadata } from "next";
-import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Oregano, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -7,8 +8,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const oregano = Oregano({
+  variable: "--font-oregano",
+  weight: ["400"],
   subsets: ["latin"],
 });
 
@@ -26,9 +28,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} antialiased`}
+        className={`${plusJakartaSans.variable} ${oregano.variable} antialiased`}
       >
-        {children}
+        <Header />
+        <main className="pt-[100px]">{children}</main>
       </body>
     </html>
   );

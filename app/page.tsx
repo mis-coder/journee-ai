@@ -6,8 +6,16 @@ import { Input } from "@/components/ui/input";
 import { Message } from "@/lib/types";
 import { useState } from "react";
 
+const initialMessages: Message[] = [
+  {
+    role: "assistant",
+    content:
+      "Hey, I am Journee, your very own journey planner! Where does your heart want to go today?",
+  },
+];
+
 export default function Home() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<Message[]>(initialMessages);
   const [input, setInput] = useState("");
 
   const handleSend = () => {
@@ -16,9 +24,10 @@ export default function Home() {
     const newMessages: Message[] = [
       ...messages,
       { role: "user", content: input.trim() },
-      { role: "assistant", content: "This is a bot reply!" },
     ];
+
     setMessages(newMessages);
+    //TODO: call api to analyze and extract trip details
     setInput("");
   };
 
@@ -48,7 +57,7 @@ export default function Home() {
         <Input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Type your message..."
+          placeholder="Try: plan a five day trip to Paris."
         />
         <Button type="submit">Send</Button>
       </form>

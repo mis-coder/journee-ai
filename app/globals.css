@@ -3,8 +3,8 @@
 
 :root {
   --primary: #009963;
-  --secondary: #EADBC8;
-  --accent: #C7B7A3;
+  --secondary: #214A3D;
+  --accent: #8FCCB8;
   --highlight: #ffe66d;
   --muted: #f1f1f1;
   --radius: 0.625rem;
@@ -22,7 +22,6 @@
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
@@ -64,7 +63,7 @@
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
-  --color-input: var(--input);
+  --color-input: var(--secondary);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);

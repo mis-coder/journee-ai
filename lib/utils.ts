@@ -117,7 +117,7 @@ export const preparePlanTripPrompt = (tripDetails: TripDetails): string => {
         \`\`\`
 
       Each day must contain:
-      - 1–3 activities
+      - 1–3 activities with a brief desciption for each activity
       - time of day (e.g. morning, afternoon, evening)
       - location
       - daily average temperature
